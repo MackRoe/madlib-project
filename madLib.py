@@ -1,4 +1,5 @@
 
+
 noun = input("Enter a noun: ")
 adjective = input("Enter an adjective: ")
 verb = input("Enter a verb: ")
@@ -9,25 +10,25 @@ first_number = input("Enter a number: ")
 second_number = input("Enter another number: ")
 third_number = input("Please enter one more number: ")
 explicative = input("What do you say when something surprises you suddenly?: ")
+word = [noun, adjective, verb, adverb, proper_noun_place, explicative]
 
 
-def check_input():
-    pass
+def check_input(word):
+    for x in word:
+        if not x.isalpha():
+            print("Sorry. That is not a valid entry.")
+            word[x] = input("Enter a " + word + " containing only letters: ")
 
-# define madlibs to be filled
-# madlibs = []
-# madlibs.append("Test {}, {}, {}")
-# test so far
-# print(madlibs(0)).format(first_number, second_number, third_number)
-# none of that worked right
 
+check_input(word)
 madlibs_done = 0
 
 
-print(explicative + " they " + verb + "ed me " + first_number + " times!")
-print(explicative + " they " + verb + "ed me " + second_number + " times!")
-print(explicative + " they " + verb + "ed me " + third_number + " times!")
+print(explicative + "! they " + verb + "ed me " + first_number + " times!")
+print(explicative + "! they " + verb + "ed me " + second_number + " times!")
+print(explicative + "! they " + verb + "ed me " + third_number + " times!")
 print(" ")
+madlibs_done += 1
 do_another = input("Would you like to do another?")
 
 if do_another == "yes":
@@ -47,5 +48,6 @@ if do_another == "yes":
     print("You ain't been up off that " + seat + ", now")
     print(" ")
     print("THANK YOU FOR PLAYING")
+    madlibs_done += 1
 else:
     print("Good bye")
