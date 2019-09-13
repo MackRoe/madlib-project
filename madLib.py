@@ -11,14 +11,15 @@ third_number = input("Please enter one more number: ")
 explicative = input("What do you say when something surprises you suddenly?: ")
 
 
+def check_input():
+    pass
 
-
-#define madlibs to be filled
-#madlibs = []
-#madlibs.append("Test {}, {}, {}")
-#test so far
-#print(madlibs(0)).format(first_number, second_number, third_number)
-#none of that worked right
+# define madlibs to be filled
+# madlibs = []
+# madlibs.append("Test {}, {}, {}")
+# test so far
+# print(madlibs(0)).format(first_number, second_number, third_number)
+# none of that worked right
 
 madlibs_done = 0
 
