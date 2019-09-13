@@ -10,17 +10,17 @@ first_number = input("Enter a number: ")
 second_number = input("Enter another number: ")
 third_number = input("Please enter one more number: ")
 explicative = input("What do you say when something surprises you suddenly?: ")
-words = [noun, adjective, verb, adverb, proper_noun_place, explicative]
+words = [noun, adjective, verb, adverb, explicative]
 
 
 def check_input(words):
     for x in words:
         if not x.isalpha():
             print("Sorry. That is not a valid entry.")
-            words[x] = input("Enter a " + x + " containing only letters: ")
+            words[x] = input("Enter a " + words[x] + " that's only letters: ")
 
 
-check_input(word)
+check_input(words)
 madlibs_done = 0
 
 
